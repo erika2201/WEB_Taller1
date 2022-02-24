@@ -102,14 +102,18 @@
     </photos>
 
 
-    <newsletter class="newsletter">
+    <newsletter class="newsletter flex">
+        <img src="/img/logo.png" alt="logo" class="newsletter__logo">
         <form>
-            <img src="/img/logo.png" alt="logo" class="newsletter__logo">
             <p>Suscríbete y recibe el 15% de descuento en tu próxima compra</p>
-            <input type="email" placeholder="Escribe tu correo" accept="email">
-            <button type="button" value="Suscribirme" alt="PINESLUX"></button>
-            <input type="checkbox">
-            <p>Acepto los términos y condiciones</p>
+            <div class="newsletter__email flex">
+                <input type="email" placeholder="Escribe tu correo" accept="email">
+                <button type="button">Suscribirme</button>
+            </div>
+            <div class="tyc flex">
+                <input type="checkbox">
+                <p>Acepto los términos y condiciones</p>
+            </div>
         </form>
     </newsletter>
 
