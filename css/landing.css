@@ -98,11 +98,21 @@ h2{
 .features__column{
     border-radius: 25px;
     width: 30%;
-    box-shadow: 10px 10px 10px 2px whitesmoke;
+    box-shadow: 10px 10px 20px 2px #d6d6d6;
+    /*Pasa al otro color más bonito*/
+    transition: 0.3s ease-in-out;
 }
 
 .features__column:hover{
     background-color: #10B4A9;
+    
+}
+
+.features__column:hover .features__subtittle{
+    color: white;
+}
+.features__column:hover .features__p{
+    color: white;
 }
 
 .features{
@@ -115,6 +125,7 @@ h2{
     color:#F64D33;
     font-size: 1em;
 }
+
 
 .features__p{
     font-weight: 400;
@@ -133,11 +144,59 @@ h2{
 
 /*photos*/
 
-.photos *{
+.photos img{
     width: 95%;
 }
 
+.photos{
+    padding-bottom: 150px;
+    justify-content: space-between;
+}
+
 /*newsletter*/
+.newsletter{
+    padding-bottom: 150px;
+    justify-content: center;
+}
+
+.newsletter img{
+    width:200px;
+    padding-right: 50px;
+}
+
+.newsletter p{
+    font-weight: 400;
+    color:#2E2E2E;
+    font-size: 0.9em;
+}
+.newsletter input{
+    background-color: #d6d6d6;
+    border:none;
+    border-radius: 5px 0 0 5px;
+    padding: 2% 30% 2% 3%;
+    font-family: "Montserrat", open sans-serif;
+    font-weight: 300;
+    color: #2E2E2E;
+}
+
+.newsletter button{
+    background-color: #10B4A9;
+    border:none;
+    border-radius: 0 5px 5px 0;
+    padding: 2% 3%;
+    font-family: "Montserrat", open sans-serif;
+    font-weight: 500;
+    color:#2E2E2E;
+    cursor: pointer;
+}
+.newsletter__email{
+    padding: 10px 0 2px 0;
+}
+
+form p{
+    width: 60%;
+}
+
 
 /*footer*/
 
@@ -146,6 +205,8 @@ h2{
     justify-content: space-between;
     padding-bottom: 50px;
 }
+
+
 .footer__tittle{
     font-weight: 600;
     color:#F64D33;
@@ -162,4 +223,7 @@ h2{
     width: 8%;
     margin-right: 5px;
 }
+
+
+
 
