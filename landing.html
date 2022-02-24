@@ -63,34 +63,46 @@
 
     <features class="features">
         <h2>Pines de calidad</h2>
-        <div class="features__column">
-            <img src="./img/resistant.png">
-            <p>Resistentes</p>
-            <p>Elaborados en metal alineación de zinc, esto permite que vivan para siempre sin romperse o deteriorarse.</p>
-        </div>
-        <div class="features__column">
-            <img src="./img/safe.png">
-            <p>Seguros</p>
-            <p>Cuentan con un broche con el que quedan perfectamente enganchados y sin miedo a perderlos.</p>
-        </div>
-        <div class="features__column">
-            <img src="./img/extensivecat.png">
-            <p>Amplio catalogo</p>
-            <p>Contamos con más de 30 referencias, pensadas especialmente para ti.</p>
+        <div class="features flex">
+            <div class="features__column">
+                <img src="./img/resistant.png">
+                <p class="features__subtittle">Resistentes</p>
+                <p class="features__p">Elaborados en metal alineación de zinc, esto permite que vivan para siempre sin romperse o deteriorarse.</p>
+            </div>
+            <div class="features__column">
+                <img src="./img/safe.png">
+                <p class="features__subtittle">Seguros</p>
+                <p class="features__p">Cuentan con un broche con el que quedan perfectamente enganchados y sin miedo a perderlos.</p>
+            </div>
+            <div class="features__column">
+                <img src="./img/extensivecat.png">
+                <p class="features__subtittle">Amplio catalogo</p>
+                <p class="features__p">Contamos con más de 30 referencias, pensadas especialmente para ti.</p>
+            </div>
         </div>
     </features>
 
 
     <photos class="photos">
         <h2>Los más populares</h2>
-        <img src="./img/popular1.png">
-        <img src="/img/popular2.png">
-        <img src="/img/popular3.png">
-        <img src="/img/popular4.png">
+        <div class="photos flex">
+            <a href="#">
+                <img src="./img/popular1.png">
+            </a>
+            <a href="#">
+                <img src="./img/popular2.png">
+            </a>
+            <a href="#">
+                <img src="./img/popular3.png">
+            </a>
+            <a href="#">
+                <img src="./img/popular4.png">
+            </a>
+        </div>
     </photos>
 
 
-    <newsletter clas="newsletter">
+    <newsletter class="newsletter">
         <form>
             <img src="/img/logo.png" alt="logo" class="newsletter__logo">
             <p>Suscríbete y recibe el 15% de descuento en tu próxima compra</p>
@@ -149,13 +161,11 @@
             <p class="footer__tittle">Síguenos</p>
             <ul class="footer__list">
                 <li>
-                    <a href="#">
-                        <img src="/img/ig.png">pines_lux</a>
+                    <a href="https://instagram.com/pines_lux?utm_medium=copy_link">
+                        <img src="/img/ig.png">@pines_lux</a>
                 </li>
             </ul>
         </div>
-
-
     </footer>
 </body>
 </html>
