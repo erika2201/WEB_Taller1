@@ -34,10 +34,20 @@ a {
   margin: 20px 0 5px 0px;
 }
 
+.header__logomobile{
+    display: none;
+}
+
 .header__item *{
     color:#F64D33;
     padding: 20px;
     font-weight: 500;
+    font-size: 1.125em;
+}
+
+.header__item *:hover{
+    border-radius: 20px;
+    text-decoration:underline;
 }
 
 .header__icon{
@@ -68,8 +78,8 @@ h1{
 h3{
     color: #2E2E2E;
     font-weight: 300;
-    font-size: 1em;
-    width: 50%;
+    font-size: 1.5em;
+    width: 80%;
 }
 
 .main__link{
@@ -78,7 +88,7 @@ h3{
     background-color: #10B4A9;
     padding: 0.5em 2em;
     border-radius: 0.3em;
-    font-size: 1em;
+    font-size: 1.125em;
 }
 
 .main__img{
@@ -111,6 +121,7 @@ h2{
 .features__column:hover .features__subtittle{
     color: white;
 }
+
 .features__column:hover .features__p{
     color: white;
 }
@@ -123,14 +134,14 @@ h2{
 .features__subtittle{
     font-weight: 600;
     color:#F64D33;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 
 .features__p{
     font-weight: 400;
     color:#2E2E2E;
-    font-size: 0.9em;
+    font-size: 1.125em;
 }
 
 .features__subtittle, .features__p{
@@ -145,12 +156,11 @@ h2{
 /*photos*/
 
 .photos img{
-    width: 95%;
+    width: 90%;
 }
 
 .photos{
     padding-bottom: 150px;
-    justify-content: space-between;
 }
 
 /*newsletter*/
@@ -167,7 +177,7 @@ h2{
 .newsletter p{
     font-weight: 400;
     color:#2E2E2E;
-    font-size: 0.9em;
+    font-size: 1.125em;
 }
 .newsletter input{
     background-color: #d6d6d6;
@@ -177,6 +187,7 @@ h2{
     font-family: "Montserrat", open sans-serif;
     font-weight: 300;
     color: #2E2E2E;
+    font-size: 1.125em;
 }
 
 .newsletter button{
@@ -188,9 +199,14 @@ h2{
     font-weight: 500;
     color:#2E2E2E;
     cursor: pointer;
+    font-size: 1.125em;
 }
 .newsletter__email{
     padding: 10px 0 2px 0;
+}
+
+.tyc *{
+    margin: 2px;
 }
 
 form p{
@@ -210,20 +226,19 @@ form p{
 .footer__tittle{
     font-weight: 600;
     color:#F64D33;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 .footer__list{
     font-weight: 400;
-    color:#2E2E2E;
-    font-size: 0.9em;
+    font-size: 1.125em;
+}
+
+.footer__list *{
+    color: #2E2E2E;
 }
 
 .footer img{
     width: 8%;
     margin-right: 5px;
 }
-
-
-
-
