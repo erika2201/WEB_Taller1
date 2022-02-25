@@ -1,7 +1,21 @@
 /*368 tableta, 400 celulares, 320 celulares más peques*/
 
-@media all and (condición){
+/*@media all and (condición){
     etiqueta{
         /*lo que quieero que pase*/
+    /*}*/
+/*}*/
+
+
+@media all and (max-width: 1280px) {
+    .header__logo, .header__list{
+        display:none;
+    }
+
+    .header__logomobile{
+        display: block;
     }
 }
+
+
+
