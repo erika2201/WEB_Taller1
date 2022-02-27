@@ -8,13 +8,120 @@
 
 
 @media all and (max-width: 1280px) {
+    html, body{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    main, .features, newsletter, footer{
+        flex-direction: column;
+    }
+
+    header{
+        padding: 20px 0;
+    }
+
     .header__logo, .header__list{
         display:none;
     }
 
-    .header__logomobile{
+    .header__mobile{
         display: block;
     }
+
+    .main, .features, .photos, .newsletter, .footer{
+        padding-bottom: 60px;
+    }
+
+    .main__leftcolumn{
+        width: 80%;
+    }
+
+    h1{
+        font-size: 1.875em;
+    }
+
+    h3{
+        font-size: 0.875em;
+        width: 100%;
+    }
+
+    h1, h3{
+        text-align: center;
+    }
+
+    .main__link{
+        font-size: 1em;
+    }
+    .main__img{
+        display: none;
+    }
+
+    h2{
+        font-size: 1.375em;
+        padding-bottom: 20px;
+    }
+    
+    .features__subtittle{
+        font-size: 1em;
+    }
+    
+    .features__p{
+        font-size: 0.875em;
+    }
+
+    .features__column{
+        width: 80%;
+        padding-bottom: 20px;
+    }
+
+    .features__subtittle, .features__p{
+        padding: 0 15px 20px;
+    }
+
+    .photos img{
+        width: 50%;
+    }
+
+
+
+
+    .newsletter img{
+        width:113px;
+    }
+
+    .newsletter p, .newsletter input, .newsletter button{
+        font-size: 0.875em;
+    }
+
+    form p{
+        width: 60%;
+    }
+
+    .newsletter  input{
+        padding: 2% 13%;
+    }
+
+    .footer, form{
+        padding-left: 10%;
+    }
+    
+    .footer__tittle{
+        font-size: 1em;
+    }
+
+    .footer__list{
+        font-size: 0.875em;
+    }
+
+    .footer img{
+        width: 14px;
+    }
+
+    .footer__column{
+        padding-bottom: 20px;
+    }
+    
 }
 
 
