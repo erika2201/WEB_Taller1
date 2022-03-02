@@ -154,8 +154,12 @@ h2{
 
 /*photos*/
 
+.photos flex{
+    width: 100%
+}
+
 .photos img{
-    width: 85%;
+    width: 100%;
 }
 
 .photos{
