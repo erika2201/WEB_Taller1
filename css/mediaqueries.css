@@ -6,14 +6,13 @@
     /*}*/
 /*}*/
 
-
 @media all and (max-width: 400px) {
     html, body{
         margin-left: 0px;
         margin-right: 0px;
     }
     
-    main, .features, newsletter, footer, .products{
+    main, .features, newsletter, footer, .products, .newsletter__email{
         flex-direction: column;
     }
     
@@ -21,22 +20,30 @@
         padding: 20px 0;
     }
 
-    .header__logo, .header__list{
+    .header__logo, .header__list, nav{
         display:none;
     }
 
     .header__mobile{
-        display: block;
+        display: flex;
+        justify-content: space-around;
     }
 
+    .header__mobile *{
+        border: none;
+        background: none;
+    }
 
     .main, .features, .newsletter, .footer{
         padding-bottom: 60px;
     }
 
-
     .main__leftcolumn{
         width: 80%;
+    }
+
+    .main__leftcolumn, h1, h3{
+        text-align: center;
     }
 
     h1{
@@ -48,13 +55,10 @@
         width: 100%;
     }
 
-    h1, h3{
-        text-align: center;
-    }
-
     .main__link{
         font-size: 1em;
     }
+
     .main__img{
         display: none;
     }
@@ -68,7 +72,7 @@
         font-size: 1em;
     }
     
-    .features__p{
+    .features__p, .newsletter p, .newsletter input, .newsletter button, .footer__list{
         font-size: 0.875em;
     }
 
@@ -81,7 +85,6 @@
         padding: 0 15px 20px;
     }
 
-    
 
     .photos img{
         width: 100%;
@@ -95,9 +98,6 @@
         padding-bottom: 60px;
     }
 
-
-
-
     .newsletter flex{
         padding: 0 10 0 10%;
     }
@@ -109,18 +109,9 @@
     .newsletter img{
         width:113px;
     }
-
-    
-    .newsletter p, .newsletter input, .newsletter button{
-        font-size: 0.875em;
-    }
     
     form p{
         width: 100%;
-    }
-    
-    .newsletter__email{
-        flex-direction: column;
     }
 
     .newsletter__email *{
@@ -135,17 +126,12 @@
         margin-bottom: 5px;
     }
 
-
     .footer{
         padding-left: 10%;
     }
     
     .footer__tittle{
         font-size: 1em;
-    }
-
-    .footer__list{
-        font-size: 0.875em;
     }
 
     .footer img{
