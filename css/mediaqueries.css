@@ -13,10 +13,10 @@
         margin-right: 0px;
     }
     
-    main, .features, newsletter, footer{
+    main, .features, newsletter, footer, .products{
         flex-direction: column;
     }
-
+    
     header{
         padding: 20px 0;
     }
@@ -29,9 +29,11 @@
         display: block;
     }
 
-    .main, .features, .photos, .newsletter, .footer{
+
+    .main, .features, .newsletter, .footer{
         padding-bottom: 60px;
     }
+
 
     .main__leftcolumn{
         width: 80%;
@@ -79,26 +81,62 @@
         padding: 0 15px 20px;
     }
 
+    
+
     .photos img{
-        width: 50%;
+        width: 100%;
+    }
+
+    .products {
+        padding: 0 10%;
+    }
+
+    .products{
+        padding-bottom: 60px;
     }
 
 
 
+
+    .newsletter flex{
+        padding: 0 10 0 10%;
+    }
+
+    .newsletter form{
+        padding: 0 10% 0 10%;
+    }
 
     .newsletter img{
         width:113px;
     }
 
+    
     .newsletter p, .newsletter input, .newsletter button{
         font-size: 0.875em;
     }
-
+    
     form p{
-        width: 70%;
+        width: 100%;
+    }
+    
+    .newsletter__email{
+        flex-direction: column;
     }
 
-    .footer, form{
+    .newsletter__email *{
+        width: 100%;
+    }
+
+    .newsletter input, .newsletter button{
+        border-radius: 5px;
+    }
+
+    .newsletter input{
+        margin-bottom: 5px;
+    }
+
+
+    .footer{
         padding-left: 10%;
     }
     

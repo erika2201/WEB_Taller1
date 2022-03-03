@@ -154,18 +154,15 @@ h2{
 
 /*photos*/
 
-.photos flex{
-    width: 100%
+.products{
+    justify-content: space-between;
+    padding-bottom: 150px;
 }
 
 .photos img{
     width: 100%;
 }
 
-.photos{
-    padding-bottom: 150px;
-    justify-content: space-between;
-}
 
 /*newsletter*/
 .newsletter{
