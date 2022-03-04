@@ -6,7 +6,7 @@
         margin-right: 0px;
     }
     
-    main, .features, newsletter, footer, .products, .newsletter__email{
+    main, .features, newsletter, footer, .products, .newsletter__email, .photos__images{
         flex-direction: column;
     }
     
@@ -49,7 +49,7 @@
         width: 100%;
     }
 
-    .main__link{
+    .main__link, .photos__link{
         font-size: 1em;
     }
 
@@ -84,12 +84,20 @@
         width: 100%;
     }
 
-    .products {
-        padding: 0 10%;
+    .photos__images *{
+        padding: 0 5%;
     }
 
-    .products{
-        padding-bottom: 60px;
+    .photos__link{
+        width: 80%;
+        text-align: center;
+        margin: 0 10%;
+        margin-top: 20px;
+    }
+
+
+    .photos{
+        padding-bottom: 100px;
     }
 
     .newsletter flex{
@@ -101,7 +109,10 @@
     }
 
     .newsletter img{
-        width:113px;
+        width:100px;
+        padding-bottom: 20px;
+        padding-right: 0;
+        justify-content: center;
     }
     
     form p{
