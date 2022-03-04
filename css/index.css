@@ -83,13 +83,17 @@ h3{
     width: 80%;
 }
 
-.main__link{
+.main__link, .photos__link{
     text-decoration: none;
     color:white;
     background-color: #10B4A9;
     padding: 0.5em 2em;
     border-radius: 0.3em;
     font-size: 1.125em;
+}
+
+.main__link:hover, .photos__link:hover{
+    box-shadow: 5px 5px 10px 2px #d6d6d6;
 }
 
 .main__img{
@@ -110,7 +114,6 @@ h2{
     border-radius: 25px;
     width: 30%;
     box-shadow: 10px 10px 20px 2px #d6d6d6;
-    /*Pasa al otro color más bonito*/
     transition: 0.3s ease-in-out;
 }
 
@@ -132,14 +135,14 @@ h2{
     padding-bottom: 150px;
 }
 
-.features__subtittle{
+.features__subtittle, .footer__tittle{
     font-weight: 600;
     color:#F64D33;
     font-size: 1.5em;
 }
 
 
-.features__p{
+.features__p, .newsletter p, .footer__list{
     font-weight: 400;
     color:#2E2E2E;
     font-size: 1.125em;
@@ -154,17 +157,25 @@ h2{
     margin: 2% 2% 0 88%;
 }
 
-/*photos*/
-
-.products{
-    justify-content: space-between;
-    padding-bottom: 60px;
-}
-
-.photos img{
+.photos__images{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
+.photos__images *{
+    width: 100%;
+    padding-right: 5px;
+}
+
+.photos__link{
+    float: right;
+    margin: 10px 10px 0;
+}
+
+.photos{
+    padding-bottom: 150px;
+}
 
 /*newsletter*/
 .newsletter{
@@ -177,11 +188,6 @@ h2{
     padding-right: 50px;
 }
 
-.newsletter p{
-    font-weight: 400;
-    color:#2E2E2E;
-    font-size: 1.125em;
-}
 .newsletter input{
     background-color: #d6d6d6;
     border:none;
@@ -218,23 +224,10 @@ form p{
 
 
 /*footer*/
-
 .footer{
     display: flex;
     justify-content: space-between;
     padding-bottom: 50px;
-}
-
-
-.footer__tittle{
-    font-weight: 600;
-    color:#F64D33;
-    font-size: 1.5em;
-}
-
-.footer__list{
-    font-weight: 400;
-    font-size: 1.125em;
 }
 
 .footer__list *{
