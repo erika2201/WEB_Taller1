@@ -56,7 +56,7 @@ a {
 }
 
 /*Banner*/
-.main{
+.main {
     justify-content: space-between;
     padding-bottom: 150px;
 }
@@ -80,7 +80,7 @@ h3{
     color: #2E2E2E;
     font-weight: 300;
     font-size: 1.5em;
-    width: 80%;
+    width: 80%
 }
 
 .main__link, .photos__link{
@@ -97,8 +97,8 @@ h3{
 }
 
 .main__img{
-    width:40%;
-    height: 35%;
+    width:590px;
+    height: 541px;
 }
 
 /*Features*/
