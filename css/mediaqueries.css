@@ -208,6 +208,10 @@
     form p{
         width: 70%;
     }
+
+    .footer__column{
+        padding-right: 3px;
+    }
 }
 
 
