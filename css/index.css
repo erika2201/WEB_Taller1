@@ -19,7 +19,7 @@ ul{
     list-style: none;
 }
 
-a {
+a{
     text-decoration: none;
 }
 
@@ -92,7 +92,7 @@ h3{
     font-size: 1.125em;
 }
 
-.main__link:hover, .photos__link:hover{
+.main__link:hover, .photos__link:hover, .product a:hover{
     box-shadow: 5px 5px 10px 2px #d6d6d6;
 }
 
@@ -142,7 +142,7 @@ h2{
 }
 
 
-.features__p, .newsletter p, .footer__list{
+.features__p, .newsletter p, .footer__list, .product p{
     font-weight: 400;
     color:#2E2E2E;
     font-size: 1.125em;
@@ -237,4 +237,35 @@ form p{
 .footer img{
     width: 8%;
     margin-right: 5px;
+}
+
+
+.product{
+    display: none;
+    border-radius: 25px;
+    margin: 0 10px 0 10px;
+    border: solid #10B4A9;
+    border-width: 0.5px;
+}
+
+.products{
+    flex-wrap: wrap;
+}
+
+.image{
+    width: 250px;
+}
+
+.product a{
+    display: block;
+    color:white;
+    background-color: #10B4A9;
+    padding: 0.5em 2em;
+    border-radius: 0 0 25px 25px;
+    font-size: 1.125em;
+    text-align: center;
+}
+
+.product p{
+    padding: 5px 0 5px 10px;
 }
