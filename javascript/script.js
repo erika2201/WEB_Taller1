@@ -54,18 +54,26 @@ const products = [
     },
 ];
 
+let divProducts = document.getElementById("products");
 
 products.forEach(product => {
     //Desestructuraciòn
     const {name, price, image, id, quant, description} = product
    //Condicional
     if (quant > 0 && price >6000){
-        document.getElementById(`obj${id}`).style.display = "block";
-        document.getElementById(`obj${id}`).getElementsByClassName('name')[0].innerHTML = name;
-        document.getElementById(`obj${id}`).getElementsByClassName('image')[0].src = image
-
-        console.log(name + " id:"+ id);
-
+        console.log(product);
     }
-})
 
+//Contenedor de mis productos
+    const productElement = document.createElement("div");
+    productElement.innerHTML = `
+        <img src="${image}">
+        <p>${name}</p>
+        <p>${description}</p>
+        <p>${"$ " + price}</p>
+        <a href="#">Añadir al carrito</a>
+    `;
+
+    divProducts.appendChild(productElement);
+
+});

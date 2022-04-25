@@ -252,11 +252,11 @@ form p{
     flex-wrap: wrap;
 }
 
-.image{
+.products img{
     width: 250px;
 }
 
-.product a{
+.products a{
     display: block;
     color:white;
     background-color: #10B4A9;
@@ -266,6 +266,7 @@ form p{
     text-align: center;
 }
 
-.product p{
+.products p{
     padding: 5px 0 5px 10px;
 }
+
