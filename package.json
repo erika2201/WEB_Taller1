@@ -1,0 +1,26 @@
+{
+  "name": "web_taller1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./register.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erika2201/WEB_Taller1.git"
+  },
+  "author": "Erika Papamija",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erika2201/WEB_Taller1/issues"
+  },
+  "homepage": "https://github.com/erika2201/WEB_Taller1#readme",
+  "dependencies": {
+    "firebase": "^9.6.11"
+  },
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}

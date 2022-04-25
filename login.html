@@ -4,18 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pines lux</title>
-
-
-    <!--Font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/mediaqueries.css">
+    <title>Login</title>
 </head>
-
 <body>
     <header>
         <nav class="nav flex">
@@ -69,75 +59,25 @@
             </div>
         </div>
     </header>
-    
-    
-    <main class="main flex">
-        <div class="main__leftcolumn">
-            <h1>¡Encuentra los mejores pines!</h1>
-            <h3>Te ofrecemos pines de tus series y películas favoritas en un solo lugar</h3>
-            <a href="#" class="main__link">Ver productos</a>
-        </div>
-            <img src="./img/banner.png" class="main__img">
-    </main>
 
-
-    <features class="features">
-        <h2>Pines de calidad</h2>
-        <div class="features flex">
-            <div class="features__column">
-                <img src="./img/resistant.png">
-                <p class="features__subtittle">Resistentes</p>
-                <p class="features__p">Elaborados en metal alineación de zinc, esto permite que vivan para siempre sin romperse o deteriorarse.</p>
+    <section class="login flex">
+        <h1>¡Que bueno es verte!</h1>
+        <div class="login__container">
+            <p class="login__tittle">Inicia sesión</p>
+            <div class="login__p">
+                <p>¿Eres nuevo por aquí?</p>
+                <a href="./register.html" class="login__link">Crea una cuenta</a>
             </div>
-            <div class="features__column">
-                <img src="./img/safe.png">
-                <p class="features__subtittle">Seguros</p>
-                <p class="features__p">Cuentan con un broche con el que quedan perfectamente enganchados y sin miedo a perderlos.</p>
-            </div>
-            <div class="features__column">
-                <img src="./img/extensivecat.png">
-                <p class="features__subtittle">Amplio catálogo</p>
-                <p class="features__p">Contamos con más de 30 referencias, pensadas especialmente para ti.</p>
-            </div>
+            <form class="login__form">
+                <input type="email" placeholder="Correo" accept="email">
+                <input type="password" placeholder="Contraseña">
+                <a href="#" class="login__link">Iniciar sesión</a>
+            </form>
+            <p class="login__p">O</p>
+            <a href="#" class="login__link">Continuar con Google</a>
+            <a href="#" class="login__link">Continuar con Facebook</a>
         </div>
-    </features>
-
-
-    <section class="photos">
-        <h2>Los más populares</h2>
-        <div class="photos__images">
-            <a href="#">
-                <img src="./img/pindisk.png" class="photo__item">
-            </a>
-            <a href="#">
-               <img src="./img/pinwhaletail.png" class="photo__item">
-            </a>
-            <a href="#">
-                <img src="./img/pinburguercat.png" class="photo__item">
-            </a>
-            <a href="#">
-                <img src="./img/pinbigskullrose.png" class="photo__item">
-            </a>
-        </div>
-        <a href="./products.html" class="photos__link">Ver más</a>
     </section>
-
-
-    <newsletter class="newsletter flex">
-        <img src="./img/logo.png" alt="logo" class="newsletter__logo">
-        <form>
-            <p>Suscríbete y recibe el 15% de descuento en tu próxima compra</p>
-            <div class="newsletter__email flex">
-                <input type="email" placeholder="Escribe tu correo" accept="email">
-                <button type="button">Suscribirme</button>
-            </div>
-            <div class="tyc flex">
-                <input type="checkbox">
-                <p>Acepto los términos y condiciones</p>
-            </div>
-        </form>
-    </newsletter>
-
 
     <footer class="footer">
         <div class="footer__column">
@@ -192,8 +132,6 @@
             </ul>
         </div>
     </footer>
-
-    <script src="./javascript/app.js"></script>
-    <script src="./javascript/calculator.js"></script>
+    
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form class = "myForm" id="myForm">
+        <h3>Subir un nuevo producto</h3>
+        <div class="createProduct">
+            <input type="text" placeholder="Nombre" accept="" name="name">
+            <input type="text" placeholder="Descripción" accept="" name="description">
+            <select name ="category">
+                <option value="series">Series</option>
+                <option value="movies">Películas</option>
+                <option value="major">Carreras</option>
+            </select>
+            <input type="number" placeholder="Cantidad" name="quant">
+            <input type="number" placeholder="Precio" accept="number" name="price">
+            <input type="file" accept="image/*" name="image">
+
+            <input type="submit" id="submitButton">
+        </div>
+    </form>
+
+    <section class="newProduct">
+
+    </section>
+
+    <script src="./javascript/uploadproduct.js"></script>
+    
+</body>
+</html>
