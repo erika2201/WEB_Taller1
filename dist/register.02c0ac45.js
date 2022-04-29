@@ -529,8 +529,7 @@ function hmrAcceptRun(bundle, id) {
 // Import the functions you need from the SDKs you need
 var _app = require("firebase/app");
 var _auth = require("firebase/auth");
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+var _auth1 = require("../src/scripts/auth");
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDFiw5Sz_QQRkEugbvnZC255UdXnCmebDI",
@@ -542,26 +541,31 @@ const firebaseConfig = {
 };
 // Initialize Firebase
 const app = _app.initializeApp(firebaseConfig);
-const registerUserForm = document.getElementById("registerUserForm");
 const auth = _auth.getAuth();
-registerUserForm.addEventListener("submit", (e)=>{
+const registerUserForm = document.getElementById("registerUserForm");
+const loginUserForm = document.getElementById("loginUserForm");
+if (registerUserForm != null) registerUserForm.addEventListener("submit", (e)=>{
     e.preventDefault();
     const name = registerUserForm.name.value;
     const lastname = registerUserForm.lastname.value;
     const email = registerUserForm.email.value;
     const password = registerUserForm.password.value;
-    registerUser(name, lastname, email, password);
+    const newUser = {
+        name,
+        lastname,
+        email,
+        password
+    };
+    _auth1.registerUser(auth, newUser);
 });
-async function registerUser(name, lastname, email, password) {
-    try {
-        const { user  } = await _auth.createUserWithEmailAndPassword(auth, email, password);
-        console.log(user);
-    } catch (e) {
-        console.log(e);
-    }
-}
+if (loginUserForm != null) loginUserForm.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const email = loginUserForm.email.value;
+    const password = loginUserForm.password.value;
+    _auth1.loginUser(auth, email, password);
+});
 
-},{"firebase/app":"5wGMN","firebase/auth":"drt1f"}],"5wGMN":[function(require,module,exports) {
+},{"firebase/app":"5wGMN","firebase/auth":"drt1f","../src/scripts/auth":"9GWoQ"}],"5wGMN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _app = require("@firebase/app");
@@ -12825,6 +12829,31 @@ var version = "0.19.12";
 }
 registerAuth("Browser" /* BROWSER */ );
 
-},{"@firebase/util":"ePiK6","@firebase/app":"3AcPV","tslib":"lRdW5","@firebase/logger":"fZmft","@firebase/component":"bi1VB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["2kDlb","lzCYW"], "lzCYW", "parcelRequire2c23")
+},{"@firebase/util":"ePiK6","@firebase/app":"3AcPV","tslib":"lRdW5","@firebase/logger":"fZmft","@firebase/component":"bi1VB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9GWoQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "registerUser", ()=>registerUser
+);
+parcelHelpers.export(exports, "loginUser", ()=>loginUser
+);
+var _auth = require("firebase/auth");
+async function registerUser(auth, { email , password  }) {
+    try {
+        const { user  } = await _auth.createUserWithEmailAndPassword(auth, email, password);
+        console.log("registrado");
+    } catch (e) {
+        console.log(e);
+    }
+}
+async function loginUser(auth, email, password) {
+    try {
+        const { user  } = await _auth.signInWithEmailAndPassword(auth, email, password);
+        console.log("entré");
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+},{"firebase/auth":"drt1f","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["2kDlb","lzCYW"], "lzCYW", "parcelRequire2c23")
 
 //# sourceMappingURL=register.02c0ac45.js.map

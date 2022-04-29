@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel ./register.html",
+    "log": "parcel ./login.html",
+    "log": "parcel ./login.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
