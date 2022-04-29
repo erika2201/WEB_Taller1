@@ -528,8 +528,13 @@ function hmrAcceptRun(bundle, id) {
 },{}],"lzCYW":[function(require,module,exports) {
 // Import the functions you need from the SDKs you need
 var _app = require("firebase/app");
+<<<<<<< HEAD
 var _auth = require("firebase/auth");
 var _auth1 = require("../src/scripts/auth");
+=======
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+>>>>>>> 086bc0b2a8929267d1be1a2002471960c24e88e3
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDFiw5Sz_QQRkEugbvnZC255UdXnCmebDI",
@@ -541,6 +546,7 @@ const firebaseConfig = {
 };
 // Initialize Firebase
 const app = _app.initializeApp(firebaseConfig);
+<<<<<<< HEAD
 const auth = _auth.getAuth();
 const registerUserForm = document.getElementById("registerUserForm");
 const loginUserForm = document.getElementById("loginUserForm");
@@ -566,6 +572,11 @@ if (loginUserForm != null) loginUserForm.addEventListener("submit", (e)=>{
 });
 
 },{"firebase/app":"5wGMN","firebase/auth":"drt1f","../src/scripts/auth":"9GWoQ"}],"5wGMN":[function(require,module,exports) {
+=======
+console.log(app);
+
+},{"firebase/app":"5wGMN"}],"5wGMN":[function(require,module,exports) {
+>>>>>>> 086bc0b2a8929267d1be1a2002471960c24e88e3
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _app = require("@firebase/app");
