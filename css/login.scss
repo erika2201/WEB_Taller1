@@ -1,0 +1,56 @@
+$montserrateFont: "Montserrat", open sans-serif;
+$orangeColor: #F64D33;
+$greenColor: #10B4A9;
+$blackColor: #2E2E2E;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: $montserrateFont;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.flex{
+    display:flex;
+    align-items: center;
+}
+
+.login{
+    &__tittle{
+        font-weight: 600;
+        color:$orangeColor;
+        font-size: 1.5em;
+    }
+
+    &__container{
+        border-radius: 25px;
+        width: 30%;
+        box-shadow: 10px 10px 20px 2px #d6d6d6;
+        transition: 0.3s ease-in-out;  
+        padding: 15px;
+    }
+
+    & input{
+        border:solid $greenColor 1px;
+        border-radius: 5px;
+        font-family: $montserrateFont;
+        font-weight: 300;
+        color: $blackColor;
+        font-size: 1.125em;
+    }
+
+    &__submit{
+        background-color: $greenColor;
+    }
+
+    &__psmall{
+        font-size: 1em;
+        color: $blackColor;
+        font-weight: 400;
+    }
+}

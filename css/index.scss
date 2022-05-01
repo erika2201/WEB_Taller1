@@ -1,0 +1,276 @@
+$montserrateFont: "Montserrat", open sans-serif;
+$orangeColor: #F64D33;
+$greenColor: #10B4A9;
+$blackColor: #2E2E2E;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: $montserrateFont;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.flex{
+    display:flex;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    color:$greenColor;
+    font-weight: 600;
+    font-size: 5em;
+    line-height: 100%;
+}
+
+h2{
+    font-weight: 600;
+    color:#10B4A9;
+    text-align: center;
+    font-size: 2.5em;
+    padding-bottom: 50px; 
+}
+
+h3{
+    color: $blackColor;
+    font-weight: 300;
+    font-size: 1.5em;
+    width: 80%
+}
+
+
+.header{
+    &__nav{
+        justify-content: space-between;
+    }
+
+    &__logo{
+        width: 112px;
+        height: 70px;
+        margin: 20px 0 5px 0px;
+    }
+
+    &__mobile{
+        display:none;
+    }
+
+    &__item *{
+        color: $orangeColor;
+        padding: 20px;
+        font-weight: 500;
+        font-size: 1.125em;
+        background: none;
+        border: none;
+    }
+
+    &__item *:hover{
+        text-decoration: underline;
+    }
+
+    &__icon{
+        width: 60px;
+    }
+}
+
+.main{
+    justify-content: space-between;
+    padding-bottom: 150px;
+
+    &__leftcolumn{
+        width: 40%;
+    }
+
+    &__leftcolumn *{
+        padding-bottom: 20px;
+    }
+
+    
+}
+
+.main, .photos{
+    &__link{
+        text-decoration: none;
+        color:white;
+        background-color: $greenColor;
+        padding: 0.5em 2em;
+        border-radius: 0.3em;
+        font-size: 1.125em;
+    }
+
+    &__img{
+        width:590px;
+        height: 541px;  
+    }
+}
+
+.main, .photos, .product{
+    &__link:hover{
+        box-shadow: 5px 5px 10px 2px #d6d6d6;
+    }
+}
+
+.features{
+    justify-content: space-between;
+    padding-bottom: 150px;
+
+    &__column{
+        border-radius: 25px;
+        width: 30%;
+        box-shadow: 10px 10px 20px 2px #d6d6d6;
+        transition: 0.3s ease-in-out;  
+    }
+
+    &__column:hover{
+        background-color: $greenColor;
+        color: white;
+    }
+
+    &__subtittle, &__tittle{
+        font-weight: 600;
+        color:$orangeColor;
+        font-size: 1.5em;
+    }
+
+    & img{
+        width: 10%;
+        margin: 2% 2% 0 88%;
+    }
+
+    &__p{
+        font-weight: 400;
+        color:$blackColor;
+        font-size: 1.125em;
+        padding: 0 20px 25px;
+    }
+
+    &__subtittle{
+        padding: 0 20px 25px;
+    }
+}
+
+.photos{
+    padding-bottom: 150px;
+    &__images{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__images *{
+        width: 100%;
+        padding-right: 5px;
+    }
+
+    &__link{
+        float: right;
+        margin: 10px 10px 0;
+    }
+}
+
+.newsletter{
+    padding-bottom: 150px;
+    justify-content: center;
+
+    & img{
+        width:200px;
+        padding-right: 50px;
+    }
+
+    & input{
+        background-color: #d6d6d6;
+        border:none;
+        border-radius: 5px 0 0 5px;
+        padding: 2% 30% 2% 3%;
+        font-family: $montserrateFont;
+        font-weight: 300;
+        color: $blackColor;
+        font-size: 1.125em;
+    }
+
+    & button{
+        background-color: $greenColor;
+        border:none;
+        border-radius: 0 5px 5px 0;
+        padding: 2% 3%;
+        font-family: $montserrateFont;
+        font-weight: 500;
+        color:#2E2E2E;
+        cursor: pointer;
+        font-size: 1.125em;
+    }
+
+    &__email{
+        padding: 10px 0 2px 0;
+    }
+
+    &__tyc{
+        margin: 2px;
+    }
+
+    & form p{
+        width: 60%;
+    }
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+
+    &__list *{
+        color:$blackColor;
+    }
+
+    & img{
+        width: 8%;
+        margin-right: 5px;
+    }
+
+    &__product{
+        display: none;
+        border-radius: 25px;
+        margin: 0 10px 0 10px;
+        border: solid $greenColor;
+        border-width: 0.5px;
+    }
+
+    &__products{
+        flex-wrap: wrap;
+    }
+
+    &__products img{
+        width: 250px;
+    }
+
+    &__products a{
+        display: block;
+        color:white;
+        background-color: #10B4A9;
+        padding: 0.5em 2em;
+        border-radius: 0 0 25px 25px;
+        font-size: 1.125em;
+        text-align: center;   
+    }
+
+    &__products p{
+        padding: 5px 0 5px 10px;
+    }
+
+    &__tittle{
+        font-weight: 600;
+        color: $orangeColor;
+        font-size: 1.5em;
+    }
+}
