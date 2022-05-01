@@ -21,6 +21,7 @@
     "firebase": "^9.6.11"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
     "parcel": "^2.5.0"
   }
 }
