@@ -20,37 +20,179 @@ html, body{
     align-items: center;
 }
 
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    color:$greenColor;
+    font-weight: 600;
+    font-size: 5em;
+    line-height: 100%;
+    margin-left: 100px;
+}
+
+h2{
+    font-weight: 600;
+    color:#10B4A9;
+    text-align: center;
+    font-size: 2.5em;
+    padding-bottom: 50px; 
+}
+
+h3{
+    color: $blackColor;
+    font-weight: 300;
+    font-size: 1.5em;
+    width: 80%
+}
+
+.header{
+    &__nav{
+        justify-content: space-between;
+    }
+
+    &__logo{
+        width: 112px;
+        height: 70px;
+        margin: 20px 0 5px 0px;
+    }
+
+    &__mobile{
+        display:none;
+    }
+
+    &__item *{
+        color: $orangeColor;
+        padding: 20px;
+        font-weight: 500;
+        font-size: 1.125em;
+        background: none;
+        border: none;
+    }
+
+    &__item *:hover{
+        text-decoration: underline;
+    }
+
+    &__icon{
+        width: 60px;
+    }
+}
+
 .login{
+    padding-top: 100px;    
+    padding-bottom: 144px;
+
     &__tittle{
         font-weight: 600;
         color:$orangeColor;
         font-size: 1.5em;
     }
-
-    &__container{
-        border-radius: 25px;
-        width: 30%;
-        box-shadow: 10px 10px 20px 2px #d6d6d6;
-        transition: 0.3s ease-in-out;  
-        padding: 15px;
-    }
-
-    & input{
-        border:solid $greenColor 1px;
-        border-radius: 5px;
-        font-family: $montserrateFont;
-        font-weight: 300;
-        color: $blackColor;
-        font-size: 1.125em;
-    }
-
-    &__submit{
-        background-color: $greenColor;
-    }
-
+    
     &__psmall{
         font-size: 1em;
         color: $blackColor;
         font-weight: 400;
+    }
+
+    &__container{
+        border-radius: 0 0 25px 25px;
+        box-shadow: 10px 10px 20px 2px #d6d6d6;  
+        padding: 16px 45px 30px 45px;
+        margin-left: 100px;
+    }
+
+    & form *, &__p{
+        margin-bottom: 25px;
+    }
+
+    & input, &__link{
+        border:solid $greenColor 1px;
+        border-radius: 5px;
+        font-family: $montserrateFont;
+        font-weight: 300;
+        font-size: 1.125em;
+        padding: 14px 0 14px 10px;
+        height: 40px;
+        width: 442px;
+    }
+
+    &__input{
+        color:$blackColor;
+    }
+
+    &__submit{
+        background-color: $greenColor;
+        color:white;
+    }
+
+    &__link{
+        text-align: center;
+    }
+
+    &__p{
+        text-align: center;
+        color: $blackColor;
+    }
+
+    &__othersEmail{
+        flex-direction: column;
+    }
+
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+
+    &__list *{
+        color:$blackColor;
+    }
+
+    & img{
+        width: 8%;
+        margin-right: 5px;
+    }
+
+    &__product{
+        display: none;
+        border-radius: 25px;
+        margin: 0 10px 0 10px;
+        border: solid $greenColor;
+        border-width: 0.5px;
+    }
+
+    &__products{
+        flex-wrap: wrap;
+    }
+
+    &__products img{
+        width: 250px;
+    }
+
+    &__products a{
+        display: block;
+        color:white;
+        background-color: #10B4A9;
+        padding: 0.5em 2em;
+        border-radius: 0 0 25px 25px;
+        font-size: 1.125em;
+        text-align: center;   
+    }
+
+    &__products p{
+        padding: 5px 0 5px 10px;
+    }
+
+    &__tittle{
+        font-weight: 600;
+        color: $orangeColor;
+        font-size: 1.5em;
     }
 }
