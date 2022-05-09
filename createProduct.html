@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new product</title>
+</head>
+<body>
+
+    <main class="main">
+        <h2 class="main__title">Administrador</h2>
+        <h3 class="main__subtitle">Subir un nuevo producto</h3>
+        <form class="main__form" id="createProductForm">
+            <div class="main__createProduct">
+                <input type="file" multiple accept="image/*" name="image">
+                <input type="text" placeholder="Nombre" accept="" name="name">
+                <textarea name="description" placeholder="Agrega una descripcón del producto"></textarea>
+                <input type="number" placeholder="Precio" accept="number" name="price">
+                <select name ="category">
+                    <option value="series">Series</option>
+                    <option value="movies">Películas</option>
+                    <option value="major">Carreras</option>
+                </select>
+
+                <input type="submit" value="Crear producto" id="submitButton">
+            </div>
+        </form>
+    </main>
+    
+    <script src="./src/scripts/createProduct.js" type="module"></script>
+</body>
+</html>
