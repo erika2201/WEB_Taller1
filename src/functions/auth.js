@@ -1,5 +1,5 @@
-import { doc, setDoc } from "firebase/firestore";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
 
 async function registerUser(auth, {email, password}){
     try {
