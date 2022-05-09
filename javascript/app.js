@@ -1,8 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { registerUser } from "../src/scripts/auth";
-import { loginUser } from "../src/scripts/auth";
+import { registerUser, loginUser, addUserToDatabase } from "../src/scripts/auth";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -17,13 +17,14 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+const db = getFirestore(app); //To get info from my collections
 
 const registerUserForm = document.getElementById("registerUserForm");
 const loginUserForm = document.getElementById("loginUserForm");
 
 
 if(registerUserForm != null){
-registerUserForm.addEventListener("submit", e =>{
+registerUserForm.addEventListener("submit", async (e) =>{
   e.preventDefault();
   const name = registerUserForm.name.value;
   const lastname = registerUserForm.lastname.value;
@@ -35,7 +36,9 @@ registerUserForm.addEventListener("submit", e =>{
     email,
     password
   }
-  registerUser(auth, newUser);
+  
+  const userRegistered = await registerUser(auth, newUser);
+  await addUserToDatabase(db, userRegistered.uid, newUser);
 });
 }
 
