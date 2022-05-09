@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="./css/index.scss">
+    <link rel="stylesheet" href="./css/shop.scss">
     <link rel="stylesheet" href="./css/mediaqueries.css">
 </head>
 <body>
@@ -69,13 +70,13 @@
     </header>
 
     <section class="shop">
-        <p class="shop__tittle">Ordenar por</p>
-        <select class="shop__filter"> 
-            <option value="series">Nombre</option>
-            <option value="movies">Precio (menor a mayor)</option>
-            <option value="major">Precio (mayor a menor)</option>
-            <option value="major">Popularidad</option>
-        </select>
+            <p class="shop__tittle">Ordenar por</p>
+            <select class="shop__select"> 
+                <option value="series">Nombre</option>
+                <option value="movies">Precio (menor a mayor)</option>
+                <option value="major">Precio (mayor a menor)</option>
+                <option value="major">Popularidad</option>
+            </select>
         <div class="shop__container">
             <img>
             <p class="shop__productName">
@@ -87,6 +88,21 @@
         </div>
 
     </section>
+
+    <newsletter class="newsletter flex">
+        <img src="./img/logo.png" alt="logo" class="newsletter__logo">
+        <form>
+            <p>Suscríbete y recibe el 15% de descuento en tu próxima compra</p>
+            <div class="newsletter__email flex">
+                <input type="email" placeholder="Escribe tu correo" accept="email">
+                <button type="button">Suscribirme</button>
+            </div>
+            <div class="tyc flex">
+                <input type="checkbox">
+                <p>Acepto los términos y condiciones</p>
+            </div>
+        </form>
+    </newsletter>
 
     <footer class="footer">
         <div class="footer__column">
