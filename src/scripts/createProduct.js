@@ -2,12 +2,16 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import firebaseConfig from "../utils/firebase";
+import { getStorage} from "firebase/storage";
 
-import { addProduct } from "../functions/addproducts";
+
+import { addProduct, uploadImages } from "../functions/addproducts";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app); //To get info from my collections
+const storage = getStorage(app);
+
 
 const createproductForm = document.getElementById("createProductForm");
 
@@ -21,8 +25,16 @@ createproductForm.addEventListener("submit", async (e) =>{
     const price = createproductForm.price.value;
     const category = createproductForm.category.value;
     
+    let gallery = [];
+
+    if(image.length){
+        const uploadedImages = await uploadImages(storage, [...image]);
+
+        gallery = await Promise.all(uploadedImages);
+    }
+
     const newProduct = {
-        //image,
+        image: gallery,
         name,
         description,
         price,
@@ -31,6 +43,4 @@ createproductForm.addEventListener("submit", async (e) =>{
 
     //Add to database
     await addProduct(db, newProduct);
-
-    console.log(newProduct);
 });

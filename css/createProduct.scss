@@ -1,3 +1,79 @@
+$montserrateFont: "Montserrat", open sans-serif;
+$orangeColor: #F64D33;
+$greenColor: #10B4A9;
+$blackColor: #2E2E2E;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: $montserrateFont;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 .flex{
-    display: flex;
+    display:flex;
+    align-items: center;
+}
+
+h2{
+    font-weight: 600;
+    color:#10B4A9;
+    text-align: center;
+    font-size: 2.5em;
+    padding-bottom: 50px; 
+}
+
+h3{
+    color: #f64d33;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.header{
+    justify-content: space-between;
+    align-items: center;
+    
+    &__logo{
+        width: 112px;
+        height: 70px;
+        margin: 20px 0 5px 0px;
+    }
+
+    &__icon{
+        width: 20px;
+    }
+}
+
+.main{
+    &__form{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 500px;
+    }
+
+    &__form *{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    & input, textarea, select{
+        border:solid $greenColor 1px;
+        border-radius: 5px;
+        font-family: $montserrateFont;
+        font-weight: 300;
+        font-size: 1.125em;
+        height: 40px;
+    }
+
+    &__submit{
+        background-color: $greenColor;
+        color:white;
+        padding: 10px;
+    }
 }

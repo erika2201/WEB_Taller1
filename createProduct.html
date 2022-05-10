@@ -15,11 +15,19 @@
   
 </head>
 <body>
+    <header class="header flex">
+        <a href="./index.html">
+            <img src="./img/logo.png" alt="logo" class="header__logo">
+        </a>
+        <a href="./login.html">
+            <img src="./img/profile.png" alt="profile" class="header__icon">
+        </a>
+    </header>
 
     <main class="main">
         <h2 class="main__title">Administrador</h2>
         <h3 class="main__subtitle">Subir un nuevo producto</h3>
-        <form class="main__form" id="createProductForm">
+        <form class="main__form flex" id="createProductForm">
                 <input type="file" multiple accept="image/*" name="image">
                 <input type="text" placeholder="Nombre" accept="" name="name">
                 <textarea name="description" placeholder="Agrega una descripcón del producto"></textarea>
@@ -30,7 +38,7 @@
                     <option value="major">Carreras</option>
                 </select>
 
-                <input type="submit" value="Crear producto" id="submitButton">
+                <input type="submit" value="Crear producto" id="submitButton" class="main__submit">
         </form>
     </main>
     
