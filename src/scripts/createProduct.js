@@ -11,7 +11,7 @@ const db = getFirestore(app); //To get info from my collections
 
 const createproductForm = document.getElementById("createProductForm");
 
-createproductForm.addEventListener("submit", e =>{
+createproductForm.addEventListener("submit", async (e) =>{
     e.preventDefault();
     console.log("Create a new product!!!");
 
@@ -22,14 +22,15 @@ createproductForm.addEventListener("submit", e =>{
     const category = createproductForm.category.value;
     
     const newProduct = {
-        image,
+        //image,
         name,
         description,
         price,
         category
     };
 
-    addProduct(newProduct);
+    //Add to database
+    await addProduct(db, newProduct);
 
-    console.log(db, newProduct);
-})
+    console.log(newProduct);
+});

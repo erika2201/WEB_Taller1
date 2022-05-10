@@ -19,6 +19,8 @@ if(registerUserForm != null){
       password,
       isAdmin: false,
     };
+
+    console.log("Usuario registrado");
     
     const userRegistered = await registerUser(auth, newUser);
     await addUserToDatabase(db, userRegistered.uid, newUser);
@@ -32,5 +34,6 @@ if(registerUserForm != null){
       const password = loginUserForm.password.value;
     
       loginUser(auth, email, password);
+      console.log("Entraste")
     });
     }
