@@ -27,7 +27,7 @@
                         <a href="./index.html">Inicio</a>
                     </li>
                     <li class="header__item">
-                        <a href="#">Pines</a>
+                        <a href="./shop.html">Pines</a>
                     </li>
                     <li class="header__item">
                         <a href="#">Tiendas</a>
@@ -70,23 +70,31 @@
     </header>
 
     <section class="shop">
-            <p class="shop__tittle">Ordenar por</p>
-            <select class="shop__select"> 
-                <option value="series">Nombre</option>
-                <option value="movies">Precio (menor a mayor)</option>
-                <option value="major">Precio (mayor a menor)</option>
-                <option value="major">Popularidad</option>
+            <p class="shop__tittle">Filtrar por</p>
+            <select class="shop__select" id="category"> 
+                <option value="">Todas</option>
+                <option value="seriesMovies">Series y películas</option>
+                <option value="design">Diseño</option>
+                <option value="Other">Otros</option>
             </select>
-        <div class="shop__container">
-            <img>
-            <p class="shop__productName">
 
-            </p>
-            <p class="shop__productPrice">
+            <p class="shop__tittle">Ordenar por</p>
+            <select class="shop__select" id="order"> 
+                <option value="name">Nombre</option>
+                <option value="asc">precio(menor a mayor)</option>
+                <option value="desc">precio(mayor a menor)</option>
+            </select>
 
-            </p>
-        </div>
-
+        <secction class="products" id="products">
+            <!--<a class="product" id="products" href="#">
+                <img src="./img/pindisk.png" class="product__img">
+                <div class="product__info">
+                    <p class="product__name">Nombre</p>
+                    <p class="product__price">Precio</p>
+                </div>
+            </a>-->
+            <div class="lds-ripple"><div></div><div></div></div>
+        </secction>   
     </section>
 
     <newsletter class="newsletter flex">
@@ -158,5 +166,6 @@
         </div>
     </footer>
     
+    <script src="./src/scripts/shop.js" type="module"></script>
 </body>
 </html>

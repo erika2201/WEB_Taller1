@@ -38,7 +38,7 @@ h1{
 
 h2{
     font-weight: 600;
-    color:#10B4A9;
+    color:$greenColor;
     text-align: center;
     font-size: 2.5em;
     padding-bottom: 50px; 
@@ -55,7 +55,126 @@ h3{
 .shop{
     &__tittle{
         font-weight: 600;
-        color: $orangeColor;
+        color: $greenColor;
         font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    &__select{
+        height: 40px;
+        padding-left: 10px;
+        border:solid $greenColor 1px;
+        border-radius: 5px;
+        font-family: $montserrateFont;
+        font-weight: 500;
+        color:$greenColor;
+        cursor: pointer;
+        font-size: 1.125em;
     }
 }
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.product:hover{
+    box-shadow: 5px 5px 10px 2px #d6d6d6;
+}
+
+.product{
+    width: 250px;
+    display: block;
+    border: solid $greenColor 1px;
+    border-radius: 25px;
+    margin-bottom: 100px;
+    margin-right: 25px;
+    
+    &__info{
+        padding: 5px 0 0 15px;
+    }
+
+    &__img{
+        width: 100%;
+        border-radius: 25px 25px 0 0;
+        object-fit: contain;
+    }
+
+    &__name{
+        margin: 10px 0 5px ;
+        color: $greenColor;
+        font-weight: 500;
+        font-size: 1.125em;
+    }
+
+    &__category{
+        margin-bottom: 5px;
+        color:$blackColor;
+        font-weight: 400;
+        font-size: 0.9em;
+    }
+
+    &__price{
+        margin-bottom: 10px;
+        color:$blackColor;
+        font-weight: 400;
+        font-size: 1.125em;
+    }
+}
+
+.lds-ripple {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid $greenColor;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+  

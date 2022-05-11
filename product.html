@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    
+    <title>Product</title>
+
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="./css/index.scss">
-    <link rel="stylesheet" href="./css/login.scss">
+    <!--<link rel="stylesheet" href="./css/product.scss">-->
     <link rel="stylesheet" href="./css/mediaqueries.css">
 </head>
 <body>
@@ -68,30 +68,27 @@
             </div>
         </div>
     </header>
-
-    <section class="login flex">
-        <h1 class="login__h1">¡Que bueno<br>es verte!</h1>
-        <div class="login__container">
-            <p class="login__tittle">Inicia sesión</p>
-            <div class="login__p flex">
-                <p class="login__psmall">¿Eres nuevo por aquí?</p>
-                <a href="./register.html" class="login__linkAccount">Crea una cuenta</a>
-            </div>
-            <form class="login__form" id="loginUserForm">
-                <input type="email" placeholder="Correo" accept="email" name="email" class="login__input">
-                <br>
-                <input type="password" placeholder="Contraseña" name="password" class="login__input">
-                <br>
-                <input type="submit" value="Iniciar sesión" class="login__submit">
-            </form>
-            <p class="login__p">O</p>
-            <div class="login__othersEmail flex">
-                <a href="#" class="login__link">Continuar con Google</a>
-                <br>
-                <a href="#" class="login__link">Continuar con Facebook</a>
-            </div>
-        </div>
+    
+    <section class="product">
+        <h1 class="product__name">Nombre producto</h1>
+        <p class="product__description">Descripción</p>
+        <p class="product__price">Precio</p>
     </section>
+
+    <newsletter class="newsletter flex">
+        <img src="./img/logo.png" alt="logo" class="newsletter__logo">
+        <form>
+            <p>Suscríbete y recibe el 15% de descuento en tu próxima compra</p>
+            <div class="newsletter__email flex">
+                <input type="email" placeholder="Escribe tu correo" accept="email">
+                <button type="button">Suscribirme</button>
+            </div>
+            <div class="tyc flex">
+                <input type="checkbox">
+                <p>Acepto los términos y condiciones</p>
+            </div>
+        </form>
+    </newsletter>
 
     <footer class="footer">
         <div class="footer__column">
@@ -146,7 +143,5 @@
             </ul>
         </div>
     </footer>
-
-    <script src="./src/scripts/login.js" type="module"></script>
 </body>
 </html>

@@ -1,16 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import firebaseConfig from "../utils/firebase";
-import { getStorage} from "firebase/storage";
-
-
+import { storage, db } from "./app";
 import { addProduct, uploadImages } from "../functions/addproducts";
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app); //To get info from my collections
-const storage = getStorage(app);
 
 
 const createproductForm = document.getElementById("createProductForm");
