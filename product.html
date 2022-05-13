@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="./css/index.scss">
-    <!--<link rel="stylesheet" href="./css/product.scss">-->
+    <link rel="stylesheet" href="./css/product.scss">
     <link rel="stylesheet" href="./css/mediaqueries.css">
 </head>
 <body>
@@ -69,10 +69,12 @@
         </div>
     </header>
     
-    <section class="product">
-        <h1 class="product__name">Nombre producto</h1>
-        <p class="product__description">Descripción</p>
-        <p class="product__price">Precio</p>
+    <section class="product flex">
+        <div class="product__assets flex" id="productAssets">
+        </div>
+
+        <div class="product__info" id="productInfo">
+        </div>
     </section>
 
     <newsletter class="newsletter flex">
@@ -143,5 +145,7 @@
             </ul>
         </div>
     </footer>
+
+    <script src="./src/scripts/product.js" type="module"></script>
 </body>
 </html>

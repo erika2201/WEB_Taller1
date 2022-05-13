@@ -3,29 +3,9 @@ $orangeColor: #F64D33;
 $greenColor: #10B4A9;
 $blackColor: #2E2E2E;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body{
-    font-family: $montserrateFont;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
 .flex{
     display:flex;
     align-items: center;
-}
-
-ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
 }
 
 h1{
@@ -34,21 +14,6 @@ h1{
     font-size: 5em;
     line-height: 100%;
     margin-left: 100px;
-}
-
-h2{
-    font-weight: 600;
-    color:#10B4A9;
-    text-align: center;
-    font-size: 2.5em;
-    padding-bottom: 50px; 
-}
-
-h3{
-    color: $blackColor;
-    font-weight: 300;
-    font-size: 1.5em;
-    width: 80%
 }
 
 .login{

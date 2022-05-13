@@ -3,61 +3,17 @@ $orangeColor: #F64D33;
 $greenColor: #10B4A9;
 $blackColor: #2E2E2E;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body{
-    font-family: $montserrateFont;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-.flex{
-    display:flex;
-    align-items: center;
-}
-
-ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-h1{
-    color:$greenColor;
-    font-weight: 600;
-    font-size: 5em;
-    line-height: 100%;
-    margin-left: 100px;
-}
-
-h2{
-    font-weight: 600;
-    color:$greenColor;
-    text-align: center;
-    font-size: 2.5em;
-    padding-bottom: 50px; 
-}
-
-h3{
-    color: $blackColor;
-    font-weight: 300;
-    font-size: 1.5em;
-    width: 80%
-}
-
-
 .shop{
+    margin-top: 50px;
     &__tittle{
         font-weight: 600;
         color: $greenColor;
         font-size: 1.5em;
         margin-bottom: 15px;
+    }
+
+    &__filter{
+        padding-right: 50px;
     }
 
     &__select{
@@ -89,7 +45,7 @@ h3{
     display: block;
     border: solid $greenColor 1px;
     border-radius: 25px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     margin-right: 25px;
     
     &__info{
