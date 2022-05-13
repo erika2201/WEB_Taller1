@@ -1,5 +1,4 @@
-import { db } from "./app";
-import { doc, getDoc } from "firebase/firestore";
+import { getProduct } from "./getProduct";
 
 const productInfoSection = document.getElementById("productInfo");
 const productAssetsSection = document.getElementById("productAssets");
@@ -15,11 +14,10 @@ function getParam(param){
 
 
 //Get database
-async function getProduct(){
+async function loadProduct(){
     const productId = getParam("id");
-    const docRef = doc(db, "products", productId);
-    const docSnap = await getDoc(docRef);
-    const data = docSnap.data();
+
+    const data = await getProduct(productId);
 
     const product = {
         ...data,
@@ -32,21 +30,40 @@ async function getProduct(){
 
 function renderProduct(product){
     productAssetsSection.innerHTML = `
-    <div class="product__gallery flex">
-        <img src="${product.image}" class="product__img"></img>
-        <img src="${product.image}" class="product__img"></img>
-        <img src="${product.image}" class="product__img"></img>
-    </div>
-
-    <img src="${product.image}" class="product__mainImg"></img>`
+    <img src="${product.image[0]}" class="product__mainImg" id="mainImg"></img>`;
 
     productInfoSection.innerHTML = `
         <h1 class="product__name">${product.name}</h1>
         <p class="product__description">${product.description}</p>
         <p class="product__price">${product.price}</p>
         <button class="product__addCart">Añadir al carrito</button>`;
-    console.log(product);
+    
+
+        if(product.image.length > 1){
+            createGallery(product.image);
+        }
+}
+
+function createGallery(image){
+    const mainImg = document.getElementById("mainImg");
+    const gallery = document.createElement("div");
+    gallery.className = "product__gallery";
+
+    image.forEach(image => {
+        gallery.innerHTML += `<img src="${image}" class="product__img"></img>`
+    });
+
+    productAssetsSection.appendChild(gallery);
+
+    const galleryImages = document.querySelector(".product__gallery");
+
+    galleryImages.addEventListener("click", e => {
+        if(e.target.tagName === "IMG"){
+            mainImg.setAttribute("src",e.target.currentSrc);
+            console.log("CLICK");
+        }
+    })
 }
 
 
-getProduct();
+loadProduct();

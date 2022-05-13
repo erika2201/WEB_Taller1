@@ -43,6 +43,7 @@ $blackColor: #2E2E2E;
 
     &__assets{
         margin-right: 50px;
+        flex-direction: row-reverse;
     }
 
     &__mainImg{
