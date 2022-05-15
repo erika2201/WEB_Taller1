@@ -5,8 +5,8 @@ async function createFirebaseCart(db, userId, cart) {
         await setDoc(doc(db, "cart", userId), {
             cart
         });
-    } catch (error) {
-        console.log(error);
+    } catch (eror) {
+        console.error();
     }
   
 }

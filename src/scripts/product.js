@@ -1,10 +1,9 @@
 import { db, auth } from "./app";
 import { onAuthStateChanged } from "firebase/auth";
-import { getMyCart } from "../utils";
 import { getProduct } from "./getProduct";
-import { getMyCart, addProductToCart } from "../utils";
+import { getMyLocalCart, addProductToCart } from "../utils";
 
-import { getFirebaseCart } from "../functions/cart.js";
+import { createFirebaseCart, getFirebaseCart } from "../functions/cart.js";
 
 const productInfoSection = document.getElementById("productInfo");
 const productAssetsSection = document.getElementById("productAssets");
@@ -54,10 +53,17 @@ function renderProduct(product){
 
         //Add product with the button
         const productCartBtn = document.querySelector(".product__addCart");
-        productCartBtn.addEventListener("click", e =>{
+        productCartBtn.addEventListener("click",async (e) =>{
+            e.preventDefault();
+            console.log("añadir");
+            //1.Save on cart
             cart.push(product);
-
+            //2. Save on localStorage
             addProductToCart(cart);
+
+            if(userLogged){
+                await createFirebaseCart(db, userLogged.iud, cart);
+            }
         });
 
 }
@@ -82,12 +88,14 @@ function createGallery(image){
     })
 }
 
+//Know if there is a userlogged
 onAuthStateChanged(auth, async (user) =>{
     if(user){
         userLogged = user;
-        cart = await getFirebaseCart (db, userLogged.uid);
+        cart = await getFirebaseCart(db, userLogged.uid);
+        console.log(cart);
     } else {
-        cart = getMyCart();
+        cart = getMyLocalCart();
     }
 
     loadProduct();
