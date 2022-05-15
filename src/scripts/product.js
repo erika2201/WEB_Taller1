@@ -1,9 +1,8 @@
 import { db, auth } from "./app";
 import { onAuthStateChanged } from "firebase/auth";
 import { getProduct } from "./getProduct";
-import { getMyLocalCart, addProductToCart } from "../utils";
-
 import { createFirebaseCart, getFirebaseCart } from "../functions/cart.js";
+import { getMyLocalCart, addProductToCart } from "../utils";
 
 const productInfoSection = document.getElementById("productInfo");
 const productAssetsSection = document.getElementById("productAssets");
@@ -15,11 +14,8 @@ function getParam(param){
     const url = window.location.search;
     const searchParams = new URLSearchParams(url);
     const productId = searchParams.get(param);
-
     return productId;
-    //console.log(productId);
 }
-
 
 //Get database
 async function loadProduct(){
@@ -53,16 +49,15 @@ function renderProduct(product){
 
         //Add product with the button
         const productCartBtn = document.querySelector(".product__addCart");
-        productCartBtn.addEventListener("click",async (e) =>{
-            e.preventDefault();
+        productCartBtn.addEventListener("click", async (e) =>{
             console.log("añadir");
             //1.Save on cart
             cart.push(product);
             //2. Save on localStorage
-            addProductToCart(cart);
+             addProductToCart(cart);
 
             if(userLogged){
-                await createFirebaseCart(db, userLogged.iud, cart);
+                await createFirebaseCart(db, userLogged.uid, cart);
             }
         });
 
@@ -92,6 +87,7 @@ function createGallery(image){
 onAuthStateChanged(auth, async (user) =>{
     if(user){
         userLogged = user;
+        console.log(user);
         cart = await getFirebaseCart(db, userLogged.uid);
         console.log(cart);
     } else {
