@@ -49,7 +49,7 @@ h1{
     }
 
     
-    & input, &__link{
+    &__input, &__link, &__submit{
         border:solid $greenColor 1px;
         border-radius: 5px;
         font-family: $montserrateFont;
@@ -60,6 +60,7 @@ h1{
         width: 442px;
     }
     
+
     &__tycp{
         font-size: 0.875em;
     }

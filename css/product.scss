@@ -48,6 +48,7 @@ $blackColor: #2E2E2E;
 
     &__mainImg{
         width: 661px;
+        object-fit: contain;
     }
 
     &__info *{
@@ -60,6 +61,7 @@ $blackColor: #2E2E2E;
         img{
             width: 192px;
             margin-bottom: 29px;
+            cursor:pointer;
         }
     }  
 }

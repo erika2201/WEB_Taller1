@@ -1,7 +1,16 @@
+import { db, auth } from "./app";
+import { onAuthStateChanged } from "firebase/auth";
+import { getMyCart } from "../utils";
 import { getProduct } from "./getProduct";
+import { getMyCart, addProductToCart } from "../utils";
+
+import { getFirebaseCart } from "../functions/cart.js";
 
 const productInfoSection = document.getElementById("productInfo");
 const productAssetsSection = document.getElementById("productAssets");
+
+let userLogged = undefined;
+let cart = [];
 
 function getParam(param){
     const url = window.location.search;
@@ -42,6 +51,15 @@ function renderProduct(product){
         if(product.image.length > 1){
             createGallery(product.image);
         }
+
+        //Add product with the button
+        const productCartBtn = document.querySelector(".product__addCart");
+        productCartBtn.addEventListener("click", e =>{
+            cart.push(product);
+
+            addProductToCart(cart);
+        });
+
 }
 
 function createGallery(image){
@@ -60,10 +78,17 @@ function createGallery(image){
     galleryImages.addEventListener("click", e => {
         if(e.target.tagName === "IMG"){
             mainImg.setAttribute("src",e.target.currentSrc);
-            console.log("CLICK");
         }
     })
 }
 
+onAuthStateChanged(auth, async (user) =>{
+    if(user){
+        userLogged = user;
+        cart = await getFirebaseCart (db, userLogged.uid);
+    } else {
+        cart = getMyCart();
+    }
 
-loadProduct();
+    loadProduct();
+});

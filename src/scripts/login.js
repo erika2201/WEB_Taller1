@@ -1,8 +1,10 @@
 import { db, auth } from "./app";
-import { loginUser, registerUser, addUserToDatabase } from "../functions/auth";
+import { loginUser, registerUser, addUserToDatabase, onAuthStateChanged } from "../functions/auth";
+import { getUser } from "./getUser";
 
 const registerUserForm = document.getElementById("registerUserForm");
 const loginUserForm = document.getElementById("loginUserForm");
+const user = auth.currentUser;
 
 if(registerUserForm != null){
   registerUserForm.addEventListener("submit", async (e) =>{
@@ -24,6 +26,8 @@ if(registerUserForm != null){
     
     const userRegistered = await registerUser(auth, newUser);
     await addUserToDatabase(db, userRegistered.uid, newUser);
+
+    location.href = "./index.html";
   });
   }
 
@@ -34,6 +38,23 @@ if(registerUserForm != null){
       const password = loginUserForm.password.value;
     
       loginUser(auth, email, password);
-      console.log("Entraste")
+      console.log("Entraste");
     });
+  }
+
+  //Change according to admin status
+  onAuthStateChanged(auth, async (user) =>{
+    if(user){
+      const uid = user.uid;
+      let userAdmin = [];
+      const userInfo = await getUser(uid);
+      userAdmin = userInfo;
+
+      if(userAdmin.isAdmin){
+        location.href = "./createProduct.html";
+      } else{
+        location.href = "./shop.html";
+      }
     }
+
+  });
