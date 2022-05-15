@@ -1,5 +1,6 @@
 import {db} from "./app"; 
 import { getProducts } from "../functions/products"; 
+import { currencyFormat } from "../utils";
 
 const productSection = document.getElementById("products");
 const categoryFilter = document.getElementById("category");
@@ -32,7 +33,7 @@ function renderProducts(item){
     <div class="product__info">
         <p class="product__name">${item.name}</p>
         <p class="product__category">Categoria: ${item.category}</p>
-        <p class="product__price">${item.price}</p>
+        <p class="product__price">${currencyFormat(item.price)}</p>
     </div>`;
 
     productSection.appendChild(product);
