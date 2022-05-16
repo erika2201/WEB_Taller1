@@ -1,0 +1,36 @@
+$montserrateFont: "Montserrat", open sans-serif;
+$orangeColor: #F64D33;
+$greenColor: #10B4A9;
+$blackColor: #2E2E2E;
+
+h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.bag{
+    margin-top: 50px;
+    &__titles{
+        width: 70%;
+        font-weight: 600;
+        color: $greenColor;
+        font-size: 1.5em;
+        margin-top: 50px;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+
+    .cart{
+        width: 70%;
+        .product{
+            align-items: center;
+            justify-content: space-between;
+            
+            &__img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
