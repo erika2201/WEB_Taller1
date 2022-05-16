@@ -53,7 +53,7 @@ if(registerUserForm != null){
       if(userAdmin.isAdmin){
         location.href = "./createProduct.html";
       } else{
-        location.href = "./shop.html";
+        location.href = "./index.html";
       }
     }
 
