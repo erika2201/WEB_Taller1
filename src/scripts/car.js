@@ -39,11 +39,11 @@ function renderProduct(product) {
     const productCart = document.createElement("li");
     productCart.className = "product flex";
     productCart.innerHTML = `
-    <div class="product__imgAndName">
+    <div class="product__imgAndName flex">
         <img src=${product.image[0]} class="product__img">
-        <P class="product__name">${product.name}</P>
+        <p class="product__name">${product.name}</p>
     </div>
-    <p class="product_price">${product.price}</p>
+    <p class="product_price">${currencyFormat(product.price)}</p>
     <div class="product__cantAndDelete">
         <p class="product__quant">Cantidad</p>
         <button class="product__delete">Eliminar</button>

@@ -1,0 +1,159 @@
+$montserrateFont: "Montserrat", open sans-serif;
+$orangeColor: #F64D33;
+$greenColor: #10B4A9;
+$blackColor: #2E2E2E;
+
+@media all and (max-width: 420px) {
+    html, body{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .header{
+        padding: 20px 0px;
+
+        &__logo, &__list, & nav{
+            display: none;
+        }
+
+        &__mobile{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &__mobile *{
+            border: none;
+            background: none;
+        }
+    }
+
+    .shop{
+        margin-top: 10px;
+        flex-direction: column;
+        
+        &__tittle{
+            font-weight: 600;
+            color: $greenColor;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+    
+        &__filter{
+            margin-bottom: 10px;
+        }
+    
+        &__select{
+            height: 30px;
+            border:solid $greenColor 1px;
+            border-radius: 5px;
+            font-family: $montserrateFont;
+            font-weight: 500;
+            color:$greenColor;
+            cursor: pointer;
+            font-size: 1em;
+        }
+    }
+
+    .products{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    .product{
+        width: 250px;
+        display: block;
+        border: solid $greenColor 1px;
+        border-radius: 20px;
+        margin-bottom: 70px;
+        
+        &__info{
+            padding: 5px 0 0 15px;
+        }
+    
+        &__img{
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+            object-fit: contain;
+        }
+    
+        &__name{
+            margin: 3px 0 5px ;
+            color: $greenColor;
+            font-weight: 500;
+            font-size: 1em;
+        }
+    
+        &__category{
+            margin-bottom: 5px;
+            color:$blackColor;
+            font-weight: 400;
+            font-size: 0.7em;
+        }
+    
+        &__price{
+            margin-bottom: 10px;
+            color:$blackColor;
+            font-weight: 400;
+            font-size: 1em;
+        }
+    }
+
+    .newsletter{
+        flex-direction: column;
+        padding-bottom: 60px;
+
+        & p, & input, & button, &__list{
+            font-size: 0.875em;
+        }
+
+        & flex{
+            padding: 0 10 0 10%;
+        }
+    
+        & form{
+            padding: 0 10% 0 10%;
+        }
+    
+        & img{
+            width:100px;
+            padding-bottom: 20px;
+            padding-right: 0;
+            justify-content: center;
+        }
+
+        &__email *{
+            width: 100%;
+        }
+    
+        & input, & button{
+            border-radius: 5px;
+        }
+    
+        & input{
+            margin-bottom: 5px;
+        }
+    }
+
+    .footer{
+        flex-direction: column;
+        padding-left: 10%;
+        
+        &__tittle{
+            font-size: 1em;
+        }
+    
+        & img{
+            width: 14px;
+        }
+    
+        &__column{
+            padding-bottom: 20px;
+        }
+    }
+}
+
+@media all and (min-width: 768px) and (max-width:1180px){
+
+}
