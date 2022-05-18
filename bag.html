@@ -74,7 +74,7 @@
         <div class="bag__titles flex">
             <p class="bag__product">Producto</p>
             <p>Precio</p>
-            <p>Cantidad</p>
+            <p>Eliminar</p>
             <p>Total</p>
         </div>
         
@@ -84,8 +84,39 @@
     
     <div class="resume flex">
         <p class="resume__total">Total</p>
-        <p class="resume__sending" id="total">   </p>
+        <p class="resume__sending" id="total"></p>
     </div>
+
+    <section class="checkout">
+        <p class="checkout__mainTittle">Checkout</p>
+        <form class="checkout__form">
+            <p class="checkout__tittle">1. Confirma tus datos</p>
+            <input type="text" placeholder="Nombre" class="checkout__input">
+            <input type="tetx" placeholder="Apellido" class="checkout__input">
+            <p class="checkout__tittle">2. A este correo enviaremos la factura:</p>
+            <input type="email" placeholder="Correo" class="checkout__input">
+            <p class="checkout__tittle">3. En esta dirección será entregado tu pedido:</p>
+            <input type="tetx" placeholder="Dirección" class="checkout__input">
+            <labe class="checkout__tittle">4. Elige un método de pago:</labe>
+            <label>
+                <input type="radio" name="payMethod">
+                Tarjeta de crédito
+            </label>
+            <label>
+                <input type="radio" name="payMethod">
+                Pago en efectivo - Contra entrega
+            </label>
+            <label>
+                <input type="radio" name="payMethod">
+                Pago con débito - PSE
+            </label>
+            <label>
+                <input type="radio" name="payMethod">
+                Pago en efectivo
+            </label>
+            <input type="submit" value="Finalizar compra" class="checkout__submit">
+        </form>
+    </section>
 
     <footer class="footer">
         <div class="footer__column">

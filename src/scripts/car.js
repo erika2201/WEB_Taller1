@@ -45,7 +45,6 @@ function renderProduct(product) {
     </div>
     <p class="product_price">${currencyFormat(product.price)}</p>
     <div class="product__cantAndDelete">
-        <p class="product__quant">Cantidad</p>
         <button class="product__delete">Eliminar</button>
     </div>
     <p class="product__total">Total</p>`

@@ -70,8 +70,63 @@ h1{
 }
 
 .resume{
-    margin-bottom: 150px;
+    width: 70%;
+    margin-bottom: 100px;
     color: $blackColor;
     font-size: 1.125em;
     font-weight: 600;
+    align-items: flex-end;
+    flex-direction: column;
+    &__sending{
+        font-size: 1.175em;
+    }
+}
+
+.checkout{
+    display: flex;
+    margin-bottom: 150px;
+    flex-direction: column;
+
+    &__mainTittle{
+        font-family: $montserrateFont;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: $greenColor;
+        margin-bottom: 15px;
+    }
+
+    &__tittle, & label{
+        color: $blackColor;
+        font-size: 1.125em;
+        font-weight: 400;
+    }
+
+    &__tittle{
+        margin-bottom: 5px;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input, &__submit{
+        height: 40px;
+        width: 500px;
+        border: 1px solid $greenColor;
+        border-radius: 5px;
+        padding: 14px 0 14px 10px;
+        font-family: $montserrateFont;
+        font-size: 1.125em;
+        font-weight: 300;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+
+    &__submit{
+        background-color: $greenColor;
+        color: white;
+        margin-top: 25px;
+    }
+
 }

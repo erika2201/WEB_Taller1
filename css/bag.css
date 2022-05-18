@@ -1,0 +1,92 @@
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.bag {
+  margin-top: 50px;
+}
+
+.bag__titles {
+  width: 70%;
+  font-weight: 600;
+  color: #10B4A9;
+  font-size: 1.5em;
+  margin-top: 50px;
+  text-align: left;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.bag__product {
+  width: 27%;
+}
+
+.bag .cart {
+  width: 70%;
+}
+
+.bag .cart .product {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.bag .cart .product__imgAndName {
+  width: 25%;
+}
+
+.bag .cart .product__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+.bag .cart .product p {
+  color: #2E2E2E;
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+.bag .cart .product__delete {
+  border-radius: 5px;
+  border: solid 1px #F64D33;
+  color: #F64D33;
+  background: none;
+  font-size: 1.125em;
+  font-weight: 500;
+  padding: 5px 25px;
+  cursor: pointer;
+}
+
+.bag .cart .product__delete:hover {
+  -webkit-box-shadow: 5px 5px 10px 2px #d6d6d6;
+          box-shadow: 5px 5px 10px 2px #d6d6d6;
+}
+
+.resume {
+  width: 70%;
+  margin-bottom: 150px;
+  color: #2E2E2E;
+  font-size: 1.125em;
+  font-weight: 600;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.resume__sending {
+  font-size: 1.175em;
+}
+/*# sourceMappingURL=bag.css.map */
