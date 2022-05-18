@@ -35,7 +35,10 @@ if(registerUserForm != null){
      //Change according to admin status
      onAuthStateChanged(auth, async (user) =>{
       if(user){
-        userLogged = user;
+        const uid = user.uid;
+        let userLogged = [];
+        const firebaseUser = await getUser(uid);
+        userLogged = firebaseUser;
         if(userLogged.isAdmin){
           location.href = "./createProduct.html";
         } else{
@@ -59,7 +62,10 @@ if(loginUserForm != null){
        //Change according to admin status
       onAuthStateChanged(auth, async (user) =>{
       if(user){
-        userLogged = user;
+        const uid = user.uid;
+        let userLogged = [];
+        const firebaseUser = await getUser(uid);
+        userLogged = firebaseUser;
         if(userLogged.isAdmin){
           location.href = "./createProduct.html";
         } else{
@@ -70,8 +76,6 @@ if(loginUserForm != null){
 
     });
   }
-
-
   
 logoutLink.addEventListener("click", e =>{
   signOut(auth).then(() => {
