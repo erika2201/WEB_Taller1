@@ -1,0 +1,145 @@
+@media (max-width: 420px) {
+  html, body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .product {
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 150px;
+  }
+
+  .product__name {
+    color: #10b4a9;
+    width: 85%;
+    margin-left: 20px;
+    font-size: 1.7em;
+    font-weight: 600;
+  }
+
+  .product__description {
+    color: #2e2e2e;
+    width: 80%;
+    margin-left: 20px;
+    font-size: 1em;
+    font-weight: 400;
+  }
+
+  .product__price {
+    color: #10b4a9;
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .product__addCart {
+    height: 40px;
+    width: 300px;
+    color: #fff;
+    background-color: #10b4a9;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-family: Montserrat, open sans-serif;
+    font-size: 1.125em;
+    font-weight: 300;
+  }
+
+  .product__assets {
+    margin-right: 50px;
+    display: block;
+  }
+
+  .product__mainImg {
+    width: 270px;
+    object-fit: contain;
+  }
+
+  .product__info * {
+    margin-bottom: 20px;
+  }
+
+  .product__gallery {
+    margin-right: 5px;
+  }
+
+  .product__gallery img {
+    width: 90px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+
+  .header {
+    padding: 20px 0;
+  }
+
+  .header__logo, .header__list, .header nav {
+    display: none;
+  }
+
+  .header__mobile {
+    justify-content: space-around;
+    display: flex;
+  }
+
+  .header__mobile * {
+    background: none;
+    border: none;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+
+  .newsletter p, .newsletter input, .newsletter button, .newsletter__list {
+    font-size: .875em;
+  }
+
+  .newsletter flex {
+    padding: 0 10px 0 10%;
+  }
+
+  .newsletter form {
+    padding: 0 10%;
+  }
+
+  .newsletter img {
+    width: 100px;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-right: 0;
+  }
+
+  .newsletter__email * {
+    width: 100%;
+  }
+
+  .newsletter input, .newsletter button {
+    border-radius: 5px;
+  }
+
+  .newsletter input {
+    margin-bottom: 5px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding-left: 10%;
+  }
+
+  .footer__tittle {
+    font-size: 1em;
+  }
+
+  .footer img {
+    width: 14px;
+  }
+
+  .footer__column {
+    padding-bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=product.52089c80.css.map */

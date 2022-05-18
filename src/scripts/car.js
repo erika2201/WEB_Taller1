@@ -27,7 +27,7 @@ async function removeProduct(productId){
         cart = newCart;
 
         if(userLogged){
-            createFirebaseCart(db, userLogged.uid, newCart);
+            await createFirebaseCart(db, userLogged.uid, newCart);
         }
 
         addProductToCart(newCart);

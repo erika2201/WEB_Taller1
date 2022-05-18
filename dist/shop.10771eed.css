@@ -1,0 +1,152 @@
+@media (max-width: 420px) {
+  html, body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .header {
+    padding: 20px 0;
+  }
+
+  .header__logo, .header__list, .header nav {
+    display: none;
+  }
+
+  .header__mobile {
+    justify-content: space-around;
+    display: flex;
+  }
+
+  .header__mobile * {
+    background: none;
+    border: none;
+  }
+
+  .shop {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .shop__tittle {
+    color: #10b4a9;
+    margin-bottom: 5px;
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .shop__filter {
+    margin-bottom: 10px;
+  }
+
+  .shop__select {
+    height: 30px;
+    color: #10b4a9;
+    cursor: pointer;
+    border: 1px solid #10b4a9;
+    border-radius: 5px;
+    font-family: Montserrat, open sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    display: flex;
+  }
+
+  .product {
+    width: 250px;
+    border: 1px solid #10b4a9;
+    border-radius: 20px;
+    margin-bottom: 70px;
+    display: block;
+  }
+
+  .product__info {
+    padding: 5px 0 0 15px;
+  }
+
+  .product__img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .product__name {
+    color: #10b4a9;
+    margin: 3px 0 5px;
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+  .product__category {
+    color: #2e2e2e;
+    margin-bottom: 5px;
+    font-size: .7em;
+    font-weight: 400;
+  }
+
+  .product__price {
+    color: #2e2e2e;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: 400;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+
+  .newsletter p, .newsletter input, .newsletter button, .newsletter__list {
+    font-size: .875em;
+  }
+
+  .newsletter flex {
+    padding: 0 10px 0 10%;
+  }
+
+  .newsletter form {
+    padding: 0 10%;
+  }
+
+  .newsletter img {
+    width: 100px;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-right: 0;
+  }
+
+  .newsletter__email * {
+    width: 100%;
+  }
+
+  .newsletter input, .newsletter button {
+    border-radius: 5px;
+  }
+
+  .newsletter input {
+    margin-bottom: 5px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding-left: 10%;
+  }
+
+  .footer__tittle {
+    font-size: 1em;
+  }
+
+  .footer img {
+    width: 14px;
+  }
+
+  .footer__column {
+    padding-bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=shop.10771eed.css.map */
