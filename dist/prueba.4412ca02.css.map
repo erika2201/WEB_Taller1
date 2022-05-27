@@ -1,0 +1,1 @@
+{"mappings":"AAAA","sources":["css/prueba.scss"],"sourcesContent":["html, body, div {\r\n    width:100%;\r\n    height:100%;\r\n    max-height:880px;\r\n    overflow:hidden;\r\n    background: white;\r\n    position:absolute;\r\n  }"],"names":[],"version":3,"file":"prueba.4412ca02.css.map","sourceRoot":"/__parcel_source_root/"}

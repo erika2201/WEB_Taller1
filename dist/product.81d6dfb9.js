@@ -533,14 +533,55 @@ var _cartJs = require("../functions/cart.js");
 var _utils = require("../utils");
 //3D //////////////////////////
 var _three = require("three");
+//const scene = new THREE.Scene();
 var _orbitControlsJs = require("three/examples/jsm/controls/OrbitControls.js");
 var _gltfloaderJs = require("three/examples/jsm/loaders/GLTFLoader.js");
-const scene = new _three.Scene();
 ///////////////////////////////
 const productInfoSection = document.getElementById("productInfo");
 const productAssetsSection = document.getElementById("productAssets");
 let userLogged = undefined;
 let cart = [];
+render3d();
+function render3d() {
+    let scene, camera, renderer;
+    scene = new _three.Scene();
+    camera = new _three.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+    renderer = new _three.WebGLRenderer({
+        antialias: true
+    });
+    scene.background = new _three.Color(0xE5E5E5);
+    camera.position.set(2, 2, 0);
+    const controls = new _orbitControlsJs.OrbitControls(camera, renderer.domElement);
+    controls.addEventListener('change', renderer);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+    let hlight = new _three.AmbientLight(0x404040, 100);
+    scene.add(hlight);
+    let directionalLight = new _three.DirectionalLight(0xffffff, 10);
+    directionalLight.castShadow = true;
+    scene.add(directionalLight);
+    try {
+        const loader = new _gltfloaderJs.GLTFLoader();
+        console.log(loader);
+        loader.load('../../objects/Finn.gltf', function(gltf) {
+            console.log(gltf);
+            scene.add(gltf.scene);
+        }, // called while loading is progressing
+        function(xhr) {
+            console.log(xhr.loaded / xhr.total * 100 + '% loaded');
+        }, // called when loading has errors
+        function(error) {
+            console.log('An error happened');
+        });
+    } catch (error) {
+        console.log("codigosapoperrohpmalparidogonorreagrrrr" + error);
+    }
+    function animate() {
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
+    }
+    animate();
+}
 function getParam(param) {
     const url = window.location.search;
     const searchParams = new URLSearchParams(url);
@@ -600,60 +641,6 @@ _auth.onAuthStateChanged(_app.auth, async (user)=>{
     } else cart = _utils.getMyLocalCart();
     loadProduct();
 });
-/////////////////////////////////////
-/////////////////////////////////////
-/////////////////////////////////////
-var camera = new _three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-var renderer = new _three.WebGLRenderer();
-/* renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.domElement.id = "3d-dom";
-renderer.domElement.classList.add("off"); */ document.getElementById("productAssets").appendChild(renderer.domElement);
-window.addEventListener("resize", function() {
-    var width = window.innerWidth;
-    var height = window.innerHeight;
-    renderer.setSize(width, height);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-});
-//ADJUST CAMERA-ZOOM RESPONSIVENESS
-if (window.innerWidth <= 767) var Start = function() {
-    camera.position.set(0, 0, 30);
-//  scene.background = new THREE.Color(0x88888);
-};
-else var Start = function() {
-    camera.position.set(0, 0, 15);
-};
-// const cubeGeometry = new THREE.BoxGeometry( 1, 1, 1 );
-// const cubeMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
-// const cubeMesh = new THREE.Mesh( cubeGeometry, cubeMaterial );
-// cubeMesh.position.set(0,0,0)
-// scene.add( cubeMesh );
-var ambiantLight = new _three.AmbientLight(0xffffff, 1);
-scene.add(ambiantLight);
-scene.background = new _three.Color(0xffffff);
-controls = new _orbitControlsJs.OrbitControls(camera, renderer.domElement);
-loader = new _gltfloaderJs.GLTFLoader();
-loader.load("model/ascis-nimbus-20/scene.gltf", function(gltf) {
-    gltf.scene.position.set(5, -15, 7);
-    scene.add(gltf.scene);
-});
-//called once at the beginning of the game
-let frame = 0;
-var Update = function() {
-    if (frame == 0) {
-        Start();
-        frame += 1;
-    }
-};
-var Render = function() {
-    renderer.render(scene, camera);
-};
-var GameLoop = function() {
-    requestAnimationFrame(GameLoop);
-    Update();
-    Render();
-};
-GameLoop();
 
 },{"./app":"bAabt","firebase/auth":"drt1f","./getProduct":"9obnC","../functions/cart.js":"b7GtJ","../utils":"jxTvD","three":"ktPTu","three/examples/jsm/controls/OrbitControls.js":"7mqRv","three/examples/jsm/loaders/GLTFLoader.js":"dVRsF"}],"9obnC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
