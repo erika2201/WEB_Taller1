@@ -4,6 +4,13 @@ import { getProduct } from "./getProduct";
 import { createFirebaseCart, getFirebaseCart } from "../functions/cart.js";
 import { getMyLocalCart, addProductToCart, currencyFormat } from "../utils";
 
+//3D //////////////////////////
+import * as THREE from 'three';
+const scene = new THREE.Scene();
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+///////////////////////////////
+
 const productInfoSection = document.getElementById("productInfo");
 const productAssetsSection = document.getElementById("productAssets");
 
@@ -96,3 +103,94 @@ onAuthStateChanged(auth, async (user) =>{
 
     loadProduct();
 });
+
+
+/////////////////////////////////////
+/////////////////////////////////////
+/////////////////////////////////////
+var camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
+
+var renderer = new THREE.WebGLRenderer();
+
+/* renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.domElement.id = "3d-dom";
+renderer.domElement.classList.add("off"); */
+
+document.getElementById("productAssets").appendChild(renderer.domElement);
+
+window.addEventListener("resize", function () {
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  renderer.setSize(width, height);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+});
+
+
+
+
+//ADJUST CAMERA-ZOOM RESPONSIVENESS
+if (window.innerWidth <= 767) {
+  var Start = function () {
+    camera.position.set(0, 0, 30);
+
+    //  scene.background = new THREE.Color(0x88888);
+  };
+
+  // alert("This is a mobile device.");
+} else {
+  var Start = function () {
+    camera.position.set(0, 0, 15);
+  };
+
+  // alert("This is a tablet or desktop.");
+}
+
+// const cubeGeometry = new THREE.BoxGeometry( 1, 1, 1 );
+// const cubeMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+// const cubeMesh = new THREE.Mesh( cubeGeometry, cubeMaterial );
+// cubeMesh.position.set(0,0,0)
+// scene.add( cubeMesh );
+
+var ambiantLight = new THREE.AmbientLight(0xffffff, 1);
+
+scene.add(ambiantLight);
+scene.background = new THREE.Color(0xffffff);
+
+controls = new OrbitControls(camera, renderer.domElement);
+
+loader = new GLTFLoader();
+loader.load("model/ascis-nimbus-20/scene.gltf", function (gltf) {//este link tiene que cambiaarse por los de firebase
+  gltf.scene.position.set(5, -15, 7);
+
+  scene.add(gltf.scene);
+});
+
+
+//called once at the beginning of the game
+
+let frame = 0;
+var Update = function () {
+  if (frame == 0) {
+    Start();
+    frame += 1;
+  }
+};
+
+var Render = function () {
+  renderer.render(scene, camera);
+};
+
+var GameLoop = function () {
+  requestAnimationFrame(GameLoop);
+
+  Update();
+  Render();
+};
+
+GameLoop();

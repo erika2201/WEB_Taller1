@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/erika2201/WEB_Taller1#readme",
   "dependencies": {
-    "firebase": "^9.6.11"
+    "firebase": "^9.6.11",
+    "three": "^0.141.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.5.0",
